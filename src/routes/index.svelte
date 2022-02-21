@@ -7,34 +7,7 @@
 </svelte:head>
 
 <Nav/>
-<h1 class="text-center text-4xl uppercase">Home</h1>
 
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
-<p>Hello</p>
 <p>Hello</p>
 <p>Hello</p>
 <p>Hello</p>

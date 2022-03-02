@@ -6,5 +6,4 @@
     <title>Our store</title>
 </svelte:head>
 
-
 <Nav/>

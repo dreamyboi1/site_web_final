@@ -41,7 +41,7 @@
   <p>Fetching data...</p>
 {:then data}
   {#each data as product}
-    <li>{product.id}</li>
+    <li>{product.name}</li>
   {/each}
 {:catch error}
   <p>Something went wrong while fetching the data:</p>

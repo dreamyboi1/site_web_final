@@ -5,7 +5,7 @@
 <Nav/>
 
 <p>Coucou ma couille</p>
-<p>Products!!!</p>
+<p>Message bien recu</p>
 <p>Products!!!</p>
 <p>Products!!!</p>
 <p>Products!!!</p>

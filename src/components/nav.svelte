@@ -46,7 +46,7 @@ import { user } from "$lib/sessionStore";
                     Log In
                 </span>
             </a>
-        
+        {/if}
         
         <img src="../../static/shopping-cart.png" alt="Shopping cart" class="h-6 w-6">
         <img src="../../static/user.png" alt="User information" class="h-6 w-6">

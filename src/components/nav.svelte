@@ -1,10 +1,14 @@
 <script>
     import supabase from "$lib/db.js";
-import { user } from "$lib/sessionStore";
+    import { user } from "$lib/sessionStore";
+    import {goto} from "$app/navigation";
 
     function handleLogout(){
         console.log("Log out");
-        supabase.auth.signOut()
+        supabase.auth.signOut();
+        user.set(null);
+        goto("/");
+
     }
     function userLoggedIn(){
         return (supabase.auth.user() ? true : false)
@@ -26,15 +30,7 @@ import { user } from "$lib/sessionStore";
         <a href="/team" class="hover:text-lime-300 py-2 px-4">Team</a>
     </div>
     <div class="flex gap-6 items-center">
-        <!--
-            <a href="/signup" class="relative inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden text-sm font-semibold text-white rounded-xl group bg-gradient-to-br from-teal-300 to-lime-300 hover:from-teal-300 hover:to-lime-300 hover:text-gray-900">
-                <span class="relative px-6 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-xl group-hover:bg-opacity-0 ">
-                    Sign Up
-                </span>
-            </a>
-        -->
-
-        {#if userLoggedIn()}
+        {#if $user}
             <button on:click={handleLogout} class="relative inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden text-sm font-semibold text-white rounded-xl group bg-gradient-to-br from-teal-300 to-lime-300 hover:from-teal-300 hover:to-lime-300 hover:text-gray-900">
                 <span class="relative px-6 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-xl group-hover:bg-opacity-0 ">
                     Log Out
@@ -47,8 +43,8 @@ import { user } from "$lib/sessionStore";
                 </span>
             </a>
         {/if}
-        
         <img src="../../static/shopping-cart.png" alt="Shopping cart" class="h-6 w-6">
         <img src="../../static/user.png" alt="User information" class="h-6 w-6">
+        
     </div>
 </nav>

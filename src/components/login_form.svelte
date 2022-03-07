@@ -10,6 +10,9 @@
         goto("/")
     }
 
+    function goToProfile(){
+        goto("/profile")
+    }
 
 
     async function handleLogin() {
@@ -18,7 +21,7 @@
             const { user, error } = await supabase.auth.signIn({email: String(email), password: String(pwd)})
             if (error) throw new Error(error.message);
             alert("Sent email and password to database!");
-            goToHome();
+            goToProfile();
         } catch (error) {
             alert(error.error_description || error.message)
         } finally{

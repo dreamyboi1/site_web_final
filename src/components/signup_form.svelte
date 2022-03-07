@@ -1,5 +1,6 @@
 <script>
     import supabase from "$lib/db.js";
+    import {goto} from "$app/navigation";
     let email;
     let pwd;
     let loading = false;
@@ -14,6 +15,7 @@
             })
             if (error) throw new Error(error.message);
             alert("Sent email and password to database!")
+            goto("/")
             console.log(user)
         } catch (error) {
             alert(error.error_description || error.message)

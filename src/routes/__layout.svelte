@@ -3,7 +3,6 @@
     import {user} from "$lib/sessionStore";
 
     user.set(supabase.auth.user());
-    //console.log($user);
 
 	supabase.auth.onAuthStateChange((_, session) => {
 		user.set(session?.user);
@@ -19,5 +18,6 @@
 </style>
 
 <div class="bg-gray-900 text-white">
+    <p>{$user}</p>
     <slot></slot>
 </div>

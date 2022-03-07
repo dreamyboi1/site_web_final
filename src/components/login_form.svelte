@@ -1,17 +1,24 @@
 <script>
     import supabase from "$lib/db.js";
+    import {user} from "$lib/sessionStore.js";
+    import {goto} from "$app/navigation"
     let email;
     let pwd;
     let loading = false;
+
+    function goToHome(){
+        goto("/")
+    }
+
 
 
     async function handleLogin() {
         try {
             loading = true;
-            const { user, error } = await supabase.auth.signIn({email, pwd})
+            const { user, error } = await supabase.auth.signIn({email: String(email), password: String(pwd)})
             if (error) throw new Error(error.message);
-            alert("Sent email and password to database!")
-            console.log(user)
+            alert("Sent email and password to database!");
+            goToHome();
         } catch (error) {
             alert(error.error_description || error.message)
         } finally{
@@ -19,8 +26,7 @@
         }
     }
     async function printUser(){
-        const user = supabase.auth.user();
-        console.log(user);
+        console.log(supabase.auth.user());
     }
 </script>
 
@@ -42,10 +48,10 @@
     </form>
         
     
-    <button on:click= {printUser} class="rounded-md w-full bg-lime-300 text-gray-900 py-1">
-        Print current user
-    </button>
-        <!--
+    <!--
+        <button on:click= {printUser} class="rounded-md w-full bg-lime-300 text-gray-900 py-1">
+            Print current user
+        </button>
             <legend for="confirm_pwd">Confirm password:</legend>
             <input type="password" id="confirm_pwd" class="text-gray-900">
         -->

@@ -1,7 +1,7 @@
 <script>
     import Nav from "../components/nav.svelte";
-    import SignIn from "../components/signin_form.svelte"
+    import LogIn from "../components/login_form.svelte"
 </script>
 
 <Nav/>
-<SignIn/>
+<LogIn/>

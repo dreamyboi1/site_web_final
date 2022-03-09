@@ -18,6 +18,5 @@
 </style>
 
 <div class="bg-gray-900 text-white">
-    <p>{$user}</p>
     <slot></slot>
 </div>

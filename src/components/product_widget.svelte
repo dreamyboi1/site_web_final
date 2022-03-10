@@ -10,7 +10,7 @@
 
 </script>
 
-<div class="w-2/3 max-w-[250px] group rounded-lg shadow-lg border-2 border-solid border-gray-900 bg-slate-500 hover:bg-slate-800 hover:hover:border-yellow-500">
+<div class="w-2/3 min-w-[70px] max-w-[250px] group rounded-lg shadow-lg border-2 border-solid border-gray-900 bg-slate-500 hover:bg-slate-800 hover:hover:border-yellow-500">
     <div class="relative pb-3/5">
         <img class="absolute w-full h-full object-cover rounded-t-lg"
         src="../static/placeholder.png"
@@ -20,7 +20,7 @@
         <h4 class="text-center py-3 text-xl font-semibold tracking-tight text-white">{title}</h4>
         <p class="leading-normal text-gray-900 group-hover:text-gray-100 text-justify">This is a smol description to briefly understand the product.</p>
         <button class="underline italic text-blue-400 leading-normal text-justify" on:click={() => isOverlayOff.set(false)}>
-            {$isOverlayOff} See product info
+            See product info
         </button>
     </div>
 

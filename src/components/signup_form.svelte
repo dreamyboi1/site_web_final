@@ -15,15 +15,11 @@
             email: String(email),
             password: String(pwd),
             },
-            {
-                data: { 
-                fullname: String(fullName), 
-                shoesize: String(shoeSize),
-                }
-            })
+            )
             if (error) throw new Error(error.message);
-            alert("Sign up successful! Check your email")
-            goto("/")
+            alert("Sign up successful! Check your email");
+            console.log(user)
+            goto("/");
         } catch (error) {
             alert(error.error_description || error.message)
         } finally{
@@ -31,9 +27,14 @@
         }
     }
 
+    function userExists(user){
+        //Function that checks if a user is in the database.
+    }
+
     function handleSubmit(){
         //Add checkForm function that checks if the form entered is correct.
         signUpwithEmail();
+        
     }
 
 </script>

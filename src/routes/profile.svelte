@@ -6,4 +6,8 @@
 
 <h1>My Profile</h1>
 
-<p>These are informations about you.</p>
+<h1 class="text-center font-semibold tracking-tight text-3xl">
+    My Profile
+</h1>
+
+

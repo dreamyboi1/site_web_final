@@ -6,10 +6,6 @@
     let pwd;
     let loading = false;
 
-    function goToHome(){
-        goto("/")
-    }
-
     function goToProfile(){
         goto("/profile")
     }
@@ -27,9 +23,6 @@
         } finally{
             loading = false;
         }
-    }
-    async function printUser(){
-        console.log(supabase.auth.user());
     }
 </script>
 
@@ -51,13 +44,6 @@
     </form>
         
     
-    <!--
-        <button on:click= {printUser} class="rounded-md w-full bg-lime-300 text-gray-900 py-1">
-            Print current user
-        </button>
-            <legend for="confirm_pwd">Confirm password:</legend>
-            <input type="password" id="confirm_pwd" class="text-gray-900">
-        -->
 
 
 </div>

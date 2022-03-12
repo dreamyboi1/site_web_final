@@ -1,11 +1,10 @@
 <script>
     import supabase from "$lib/db.js";
     import {goto} from "$app/navigation";
-    let fullName;
-    let shoeSize;
     let email;
     let pwd;
     let loading = false;
+    let success = false;
 
     async function signUpwithEmail(){
         try {
@@ -16,11 +15,16 @@
             password: String(pwd),
             },
             )
-            if (error) throw new Error(error.message);
-            alert("Sign up successful! Check your email");
-            console.log(user)
-            goto("/");
+            if (error){
+                success = false;
+                throw new Error(error.message);
+            } else{
+                success = true;
+                alert("Sign up successful! Check your email");
+                goto("/");
+            }
         } catch (error) {
+            success = false;
             alert(error.error_description || error.message)
         } finally{
             loading = false;
@@ -31,10 +35,20 @@
         //Function that checks if a user is in the database.
     }
 
+    /* async function insertNewProfile(){
+        const { data, error } = await supabase
+            .from('profiles')
+            .insert([
+                { name: 'The Shire', country_id: 554 }
+            ])
+    } */
+
     function handleSubmit(){
         //Add checkForm function that checks if the form entered is correct.
         signUpwithEmail();
-        
+        if (success){
+
+        }
     }
 
 </script>
@@ -42,14 +56,14 @@
 <div class="flex flex-col items-center gap-2">
     <p class="text-xl">Sign Up</p>
     <form on:submit|preventDefault = {handleSubmit} class="flex flex-col gap-2">
-        <div>
+        <!-- <div>
             <legend for="fullname">Your name:</legend>
             <input type="text" name="fullname" bind:value={fullName} class="rounded-md text-gray-900 w-full">
         </div>
         <div>
             <legend for="shoesize">Your shoe size:</legend>
             <input type="text" name="shoesize" bind:value={shoeSize} class="rounded-md text-gray-900 w-full">
-        </div>
+        </div> -->
         <div>
             <legend for="email">Email:</legend>
             <input type="email" name="email" bind:value={email} class="rounded-md text-gray-900 w-full">

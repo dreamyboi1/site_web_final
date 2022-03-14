@@ -14,7 +14,7 @@
 
 
 
-<nav class="flex bg-gray-900 text-white w-screen h-16 justify-between px-6 py-4 items-center">    
+<nav class="flex bg-gray-900 text-white h-16 justify-between px-6 py-4 w-full items-center">    
     <div class="flex gap-4 items-center">
         <a href="/"><img src="../../static/puzzle-piece.png" alt="Puzzle logo" class="h-8 w-8"></a>
         <a href="/" class="hover:text-lime-300">Our company name</a>
@@ -41,8 +41,8 @@
         {/if}
         <img src="../../static/shopping-cart.png" alt="Shopping cart" class="h-6 w-6">
         
-        <!-- {#if $user}
-        {/if} -->
-        <a href="/profile"><img src="../../static/user.png" alt="User information" class="h-6 w-6"></a>
+        {#if $user}
+            <a href="/profile"><img src="../../static/user.png" alt="User information" class="h-6 w-6"></a>
+        {/if}
     </div>
 </nav>

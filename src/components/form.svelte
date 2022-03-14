@@ -36,7 +36,7 @@
 
 
 
-<h1>My favorite games</h1>
+<!-- <h1>My favorite games</h1>
 {#await getData()}
   <p>Fetching data...</p>
 {:then data}
@@ -46,4 +46,4 @@
 {:catch error}
   <p>Something went wrong while fetching the data:</p>
   <pre>{error}</pre>
-{/await}
+{/await} -->

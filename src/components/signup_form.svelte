@@ -31,24 +31,13 @@
         }
     }
 
-    function userExists(user){
-        //Function that checks if a user is in the database.
+    function checkForm(){
+        
     }
-
-    /* async function insertNewProfile(){
-        const { data, error } = await supabase
-            .from('profiles')
-            .insert([
-                { name: 'The Shire', country_id: 554 }
-            ])
-    } */
 
     function handleSubmit(){
         //Add checkForm function that checks if the form entered is correct.
         signUpwithEmail();
-        if (success){
-
-        }
     }
 
 </script>

@@ -2,8 +2,8 @@
     import Nav from "../components/nav.svelte"
     import supabase from "$lib/db.js";
     import {user} from "$lib/sessionStore.js";
-import { createEventDispatcher } from "svelte";
-import { each } from "svelte/internal";
+    import { createEventDispatcher } from "svelte";
+    import { each } from "svelte/internal";
 
 
     let firstName;
@@ -33,6 +33,7 @@ import { each } from "svelte/internal";
             )
             if (error) throw new Error(error.message)
             alert("Profile updated!")
+            location.reload()
             return data
 
         } catch (TypeError){

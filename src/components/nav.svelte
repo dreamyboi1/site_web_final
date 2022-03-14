@@ -28,13 +28,13 @@
     <div class="flex gap-6 items-center">
         {#if $user}
             <button on:click={handleLogout} class="relative inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden text-sm font-semibold text-white rounded-xl group bg-gradient-to-br from-teal-300 to-lime-300 hover:from-teal-300 hover:to-lime-300 hover:text-gray-900">
-                <span class="relative px-6 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-xl group-hover:bg-opacity-0 ">
+                <span class="relative px-6 py-2.5 transition-all ease-in duration-75 bg-gray-900 rounded-xl group-hover:bg-opacity-0 ">
                     Log Out
                 </span>
             </button>
         {:else}
             <a href="/auth" class="relative inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden text-sm font-semibold text-white rounded-xl group bg-gradient-to-br from-teal-300 to-lime-300 hover:from-teal-300 hover:to-lime-300 hover:text-gray-900">
-                <span class="relative px-6 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-xl group-hover:bg-opacity-0 ">
+                <span class="relative px-6 py-2.5 transition-all ease-in duration-75 bg-gray-900 rounded-xl group-hover:bg-opacity-0 ">
                     Log In
                 </span>
             </a>

@@ -2,11 +2,19 @@
     import Nav from "../components/nav.svelte";
     import ProductWidget from "../components/product_widget.svelte";
     import {isOverlayOff} from "../lib/sessionStore.js";
-
+    import supabase from "$lib/db.js"
 
     let dbProductLen = 15;
 
-import Cart from "./cart.svelte";
+    import Cart from "./cart.svelte";
+
+    async function getData() {
+            let { data, error } = await supabase
+                .from('products')
+                .select()
+            if (error) throw new Error(error.message)
+            return data
+        }
 </script>
 
 <div class="sticky z-10 top-0 left-0">
@@ -92,6 +100,16 @@ import Cart from "./cart.svelte";
         </div>
     {/if}
  -->
+    {#await getData()}
+    <p>Fetching data...</p>
+    {:then data}
+    {#each data as product}
+        <li>{product.title}</li>
+    {/each}
+    {:catch error}
+        <p>Something went wrong while fetching the data:</p>
+        <pre>{error}</pre>
+    {/await}
 </body>
 
 

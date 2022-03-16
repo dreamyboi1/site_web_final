@@ -17,7 +17,7 @@
 <nav class="flex bg-gray-900 text-white h-16 justify-between px-6 py-4 w-full items-center">    
     <div class="flex gap-4 items-center">
         <a href="/"><img src="../../static/puzzle-piece.png" alt="Puzzle logo" class="h-8 w-8"></a>
-        <a href="/" class="hover:text-lime-300">Our company name</a>
+        <a href="/" class="hover:text-lime-300">Useless market</a>
     </div>
     <div class="flex font-semibold gap-4 hover:text-gray-500">
         <a href="/" class="hover:text-lime-300 py-2 px-4">Home</a>

@@ -9,34 +9,29 @@
 <Nav/>
 
 
-<section id="hero_text" class="flex items-center w-full">
+<section id="hero_text" class="grid place-items-center">
 
-    <div class="flex flex-col w-1/3 gap-4 p-10">
-        <p class="text-4xl text-teal-400 font-extrabold">
+    <div class="p-8 grid max-w-7xl place-items-center gap-8 grid-cols-2 lg:grid-cols-5 lg:grid-rows-3 sm:grid-cols-3">
+        <p class="text-4xl text-teal-400 font-extrabold col-span-2 lg:col-span-3">
             Useless market.
+            A selection of 15 products that have one purpose: <span class="text-lime-400">None.</span>
         </p>
+            
+        <img class="lg:col-start-5 aspect-square object-cover rounded-md" src="/static/img_index/fork1.jpg" alt="A concrete umbrella" >
+        <img class="lg:col-start-2 aspect-square object-cover rounded-md" src="/static/img_index/concrete_umbrella.jpg" alt="A concrete umbrella" >
+        <img class="aspect-square object-cover rounded-md hover:scale-125" src="/static/img_index/thick_button.jpg" alt="A concrete umbrella" >
+        <img class="aspect-square object-cover rounded-md hover:scale-125" src="/static/img_index/long_mug.jpg" alt="A concrete umbrella" >
+        <img class="aspect-square object-cover rounded-md hover:scale-125" src="/static/img_index/rain_boots.jpg" alt="A concrete umbrella" >
+        <img class="aspect-square object-cover rounded-md hover:shadow-lg hover:shadow-red-300" src="/static/img_index/fork2.jpg" alt="A concrete umbrella" >
+        <img class="aspect-square object-cover rounded-md" src="/static/img_index/two-pints.jpg" alt="A concrete umbrella" >
 
-        <p class="text-2xl font-semibold">
-            An exclusive selection of 15 products that have one purpose: <span class="text-teal-400">None.</span>
+        <img class="aspect-square object-cover rounded-md" src="/static/img_index/uncomfortable_teapot.jpg" alt="A concrete umbrella" >
+
+        <p class="sm:self-center col-span-2">
+            Lorem ipsum dolor sit amet consectetur 
         </p>
     </div>
-    <div class = "w-2/3 p-10">
-        <p>
-            This
-        </p>
-        <p>
-            This
-        </p>
-        <p>
-            This
-        </p>
-        <p>
-            This
-        </p>
-        <p>
-            This
-        </p>
-    </div>
+
 </section>
 <span class="w-full "> </span>
 <section id="history" class="w-full flex flex-col divide-teal-300">

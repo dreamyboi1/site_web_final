@@ -1,9 +1,9 @@
 <script>
     import supabase from "$lib/db.js"
 
-    async function getData(table) {
+    async function getData() {
         let { data, error } = await supabase
-            .from(table)
+            .from('product')
             .select()
         if (error) throw new Error(error.message)
         return data

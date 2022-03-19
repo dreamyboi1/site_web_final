@@ -14,16 +14,16 @@
 
 
 
-<nav class="flex bg-yellow-300 text-indigo-500 font-bold h-16 justify-between px-6 py-4 w-full items-center">    
+<nav class="flex bg-blue-500 text-yellow-300 text-lg font-semibold h-16 justify-between px-6 py-4 w-full items-center">    
     <div class="flex gap-4 items-center">
         <a href="/"><img src="../../static/puzzle-piece.png" alt="Puzzle logo" class="h-8 w-8"></a>
-        <a href="/" class="hover:text-blue-500">Useless market</a>
+        <a href="/" class="hover:text-pink-500">Useless market</a>
     </div>
-    <div class="flex gap-4 hover:text-transparent text-lg">
-        <a href="/" class="hover:text-blue-500 py-2 px-4">Home</a>
-        <a href="/products" class="hover:text-blue-500 py-2 px-4">Products</a>
-        <a href="/contact" class="hover:text-blue-500 py-2 px-4">Contact</a>
-        <a href="/team" class="hover:text-blue-500 py-2 px-4">Team</a>
+    <div class="flex gap-4 text-lg">
+        <a href="/" class="hover:text-pink-500 py-2 px-4">Home</a>
+        <a href="/products" class="hover:text-pink-500 py-2 px-4">Products</a>
+        <a href="/contact" class="hover:text-pink-500 py-2 px-4">Contact</a>
+        <a href="/team" class="hover:text-pink-500 py-2 px-4">Team</a>
     </div>
     <div class="flex gap-6 items-center">
         {#if $user}
@@ -33,8 +33,8 @@
                 </span>
             </button>
         {:else}
-            <a href="/auth" class="relative inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden text-sm font-semibold text-indigo-500  rounded-xl group bg-gradient-to-br from-pink-500 to-indigo-500 hover:from-pink-500 hover:indigo-500 hover:text-white">
-                <span class="relative px-6 py-2.5 transition-all ease-in duration-75 bg-yellow-300 rounded-xl group-hover:bg-opacity-0 ">
+            <a href="/auth" class="relative inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden text-sm font-semibold text-yellow-300  rounded-xl group bg-gradient-to-br from-yellow-300 to-pink-500 hover:from-yellow-300 hover:to-pink-500 hover:text-gray-900">
+                <span class="relative px-6 py-2.5 transition-all ease-in duration-75 bg-blue-500 rounded-xl group-hover:bg-opacity-0 ">
                     Log In
                 </span>
             </a>

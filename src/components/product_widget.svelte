@@ -53,7 +53,7 @@
         <div class="flex justify-between items-center px-12 py-4">
             <h4 class="text-center text-xl font-semibold tracking-tight mb-7
             sm:mb-1 text-yellow-600">{price} €</h4>
-            <button class="shadow-lg bg-gray-700 hover:bg-gray-300 text-gray-200 hover:text-gray-700 font-bold mb-3 md:mb-2 sm:mb-1 py-2 px-4 rounded inline-flex items-center">
+            <button class="shadow-lg bg-blue-500 hover:bg-gray-300 text-gray-200 hover:text-gray-700 font-bold mb-3 md:mb-2 sm:mb-1 py-2 px-4 rounded inline-flex items-center">
                 <img class="w-4 h-4 mr-2"
                 src="../static/shopping-cart.png" 
                 alt="add to cart"/>

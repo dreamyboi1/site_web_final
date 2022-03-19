@@ -18,10 +18,10 @@
     <Nav></Nav>
 </div>
 
-<body class="bg-gray-900">
+<body class="">
     <div class="grid place-items-center py-12">
         <div class="w-1/2">
-            <h1 class="text-center font-semibold tracking-tight text-3xl">
+            <h1 class="text-center text-yellow-300 font-semibold tracking-tight text-3xl">
                 Our selection of products at the forefront of Tech and Innovation!
             </h1>
         </div>

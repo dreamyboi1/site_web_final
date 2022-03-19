@@ -17,12 +17,21 @@ theme: {
       'stone-900': '#1c1917',
       'teal': '#5eead4',
       'white': "#ffffff",
+      'yellow-b': "#fecd45",
+      'blue-b': "#2568fb",
+      'white': "#ffffff",
+
   }, */
   extend: {
     spacing: {
       
       '3/5': '60%'
-    }
+    },
+    fontFamily: {
+      oswald: "'Oswald', sans-serif",
+      lora: "'Lora', serif",
+      roboto_slab: "'Roboto Slab', serif",
+    },
   }
 },
 

@@ -27,24 +27,24 @@
 </script>
 
 <body>
-<div class="flex flex-col items-center gap-2">
-    <p class="text-xl">Log In</p>
-    <form on:submit|preventDefault = {handleLogin} class="flex flex-col gap-2">
-        <div>
-            <legend for="email">Email:</legend>
-            <input type="text" name="email" bind:value={email} class="rounded-md text-gray-900 w-full">
+    <div class="w-64 h-80 sm:w-80 lg:w-80 p-4 text-yellow-300 bg-blue-500 rounded-lg shadow-lg">
+        <div class="w-full h-full">
+            <div class="flex flex-col gap-2">
+                <p class="text-2xl uppercase">Log In</p>
+                <form on:submit|preventDefault = {handleLogin} class="flex flex-col gap-2">
+                    <div>
+                        <legend for="email">Email:</legend>
+                        <input type="text" name="email" bind:value={email} placeholder="E-mail" class="rounded-md text-gray-900 w-full p-2">
+                    </div>
+                    <div>
+                        <legend for="pwd">Password:</legend>
+                        <input type="password" name="pwd" bind:value={pwd} placeholder="Password" class="rounded-md text-gray-900 w-full p-2">
+                    </div>
+                    <button type="submit" class="rounded-md w-full bg-yellow-300 text-gray-900 py-2 relative top-6">
+                        Submit
+                    </button>
+                </form>
+            </div>
         </div>
-        <div>
-            <legend for="pwd">Password:</legend>
-            <input type="password" name="pwd" bind:value={pwd} class="rounded-md text-gray-900 w-full">
-        </div>
-        <button type="submit" class="rounded-md w-full bg-lime-300 text-gray-900 py-1">
-            Submit
-        </button>
-    </form>
-        
-    
-
-
-</div>
+    </div>
 </body>

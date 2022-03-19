@@ -4,7 +4,7 @@
     let email;
     let pwd;
     let loading = false;
-    let success = false;
+    let confirm_pwd;
 
     async function signUpwithEmail(){
         try {
@@ -31,39 +31,41 @@
         }
     }
 
-    function checkForm(){
-        
+    function passwordsEqual(){
+        return (pwd === confirm_pwd);
     }
 
     function handleSubmit(){
-        //Add checkForm function that checks if the form entered is correct.
-        signUpwithEmail();
+        if (passwordsEqual()){
+            signUpwithEmail();
+        } else{
+            alert("Passwords don't match!")
+            pwd = "";
+            confirm_pwd = "";
+        }
     }
 
 </script>
 
-<div class="flex flex-col items-center gap-2">
-    <p class="text-xl">Sign Up</p>
-    <form on:submit|preventDefault = {handleSubmit} class="flex flex-col gap-2">
-        <!-- <div>
-            <legend for="fullname">Your name:</legend>
-            <input type="text" name="fullname" bind:value={fullName} class="rounded-md text-gray-900 w-full">
-        </div>
-        <div>
-            <legend for="shoesize">Your shoe size:</legend>
-            <input type="text" name="shoesize" bind:value={shoeSize} class="rounded-md text-gray-900 w-full">
-        </div> -->
-        <div>
-            <legend for="email">Email:</legend>
-            <input type="email" name="email" bind:value={email} class="rounded-md text-gray-900 w-full">
-        </div>
-        <div>
-            <legend for="pwd">Password:</legend>
-            <input type="password" name="pwd" bind:value={pwd} class="rounded-md text-gray-900 w-full">
-        </div>
-        <button type="submit" class="rounded-md w-full bg-lime-300 text-gray-900 py-1">
-            Submit
-        </button>
-    </form>
-
+<div class="w-80 max-h-96 max-w-md p-4 text-yellow-300 bg-blue-500 rounded-lg shadow-lg">
+    <div class="flex flex-col gap-6">
+        <p class="text-4xl uppercase self-center">Sign Up</p>
+        <form on:submit|preventDefault = {handleSubmit} class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2">
+                <legend for="email">Email:</legend>
+                <input type="email" name="email" placeholder="E-Mail" bind:value={email} class="rounded-md text-gray-900 w-full p-2">
+            </div>
+            <div class="flex flex-col gap-2">
+                <legend for="pwd">Password:</legend>
+                <input type="password" name="pwd" placeholder="Password" bind:value={pwd} class="rounded-md text-gray-900 w-full p-2">
+            </div>
+            <div class="flex flex-col gap-2">
+                <legend for="pwd">Confirm Password:</legend>
+                <input type="password" name="pwd" placeholder="Confirm Password" bind:value={confirm_pwd} class="rounded-md text-gray-900 w-full p-2">
+            </div>
+            <button type="submit" class="mt-2 rounded-md w-full bg-yellow-300 text-gray-900 py-2">
+                Submit
+            </button>
+        </form>
+    </div>
 </div>

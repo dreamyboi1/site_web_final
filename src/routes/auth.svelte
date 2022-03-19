@@ -12,9 +12,9 @@
     
 </script>
 
-<!-- <div class="sticky z-10 top-0 left-0">
+<div class="absolute w-full z-10">
     <Nav/>
-</div> -->
+</div>
 
 <!-- {#if login}
     <LogIn/>
@@ -35,11 +35,21 @@
     </div>
 </div> -->
 
-<div class="relative">
-    <div class="text-black absolute inset-0 h-screen flex justify-center items-center">
-        <div class="grid place-items-center">
+
+<div class="text-black bg-pink-500 absolute inset-0 h-screen flex flex-col justify-center">
+        {#if login}
+            <div class="self-center">
                 <LogIn/>
-            
-        </div>
-    </div>
+            </div>
+            <button class="relative -left-24 top-2" on:click={swapLogin}>
+                Create an account.
+            </button>
+        {:else}
+            <div class="self-center">
+                <SignUp/>
+            </div>
+            <button class="relative -left-20 top-2"  on:click={swapLogin}>
+                Already have an account?
+            </button>
+        {/if}
 </div>

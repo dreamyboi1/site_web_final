@@ -32,6 +32,9 @@ theme: {
       lora: "'Lora', serif",
       roboto_slab: "'Roboto Slab', serif",
     },
+    minWidth:{
+      
+    }
   }
 },
 

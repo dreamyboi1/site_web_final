@@ -26,25 +26,22 @@
     }
 </script>
 
-<body>
-    <div class="w-64 h-80 sm:w-80 lg:w-80 p-4 text-yellow-300 bg-blue-500 rounded-lg shadow-lg">
-        <div class="w-full h-full">
+
+<div class="w-80 max-h-96 max-w-md p-4 text-yellow-300 bg-blue-500 rounded-lg shadow-lg">
+    <div class="flex flex-col gap-6">
+        <p class="text-4xl uppercase self-center">Log In</p>
+        <form on:submit|preventDefault = {handleLogin} class="flex flex-col gap-6">
             <div class="flex flex-col gap-2">
-                <p class="text-2xl uppercase">Log In</p>
-                <form on:submit|preventDefault = {handleLogin} class="flex flex-col gap-2">
-                    <div>
-                        <legend for="email">Email:</legend>
-                        <input type="text" name="email" bind:value={email} placeholder="E-mail" class="rounded-md text-gray-900 w-full p-2">
-                    </div>
-                    <div>
-                        <legend for="pwd">Password:</legend>
-                        <input type="password" name="pwd" bind:value={pwd} placeholder="Password" class="rounded-md text-gray-900 w-full p-2">
-                    </div>
-                    <button type="submit" class="rounded-md w-full bg-yellow-300 text-gray-900 py-2 relative top-6">
-                        Submit
-                    </button>
-                </form>
+                <legend for="email">Email:</legend>
+                <input type="text" name="email" bind:value={email} placeholder="E-mail" class="rounded-md text-gray-900 w-full p-2">
             </div>
-        </div>
+            <div class="flex flex-col gap-2">
+                <legend for="pwd">Password:</legend>
+                <input type="password" name="pwd" bind:value={pwd} placeholder="Password" class="rounded-md text-gray-900 w-full p-2">
+            </div>
+            <button type="submit" class="rounded-md w-full bg-yellow-300 text-gray-900 py-2">
+                Submit
+            </button>
+        </form>
     </div>
-</body>
+</div>

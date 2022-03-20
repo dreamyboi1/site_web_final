@@ -1,6 +1,5 @@
 <script>
 
-
     export let price;
     export let title;
     export let description;
@@ -10,6 +9,19 @@
     export let location;
     export let size;
     export let imgUrl;
+    export let productId;
+    
+    import supabase from "$lib/db.js";
+    import { user } from "$lib/sessionStore";
+
+    async function sendData(userId, productId) {
+        const { data, error } = await supabase
+            .from('cart')
+            .insert([
+            { 'user_id': userId, 'product_id' : productId, 'quantity' : 1}
+        ])
+        if (error) throw new Error(error.message)
+    }
 
 </script>
 
@@ -53,7 +65,8 @@
         <div class="flex justify-between items-center px-12 py-4">
             <h4 class="text-center text-xl font-semibold tracking-tight mb-7
             sm:mb-1 text-yellow-600">{price} €</h4>
-            <button class="shadow-lg bg-blue-500 hover:bg-gray-300 text-white font-bold mb-3 md:mb-2 sm:mb-1 py-2 px-4 rounded inline-flex items-center">
+            <button class="shadow-lg bg-blue-500 hover:bg-gray-300 text-white font-bold mb-3 md:mb-2 sm:mb-1 py-2 px-4 rounded inline-flex items-center"
+            on:click={sendData(productId)}>
                 <img class="w-4 h-4 mr-2"
                 src="../static/shopping-cart.png" 
                 alt="add to cart"/>

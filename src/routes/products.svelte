@@ -35,13 +35,12 @@
             <p>Fetching data...</p>
         {:then data}
 
-        {#each data as product}
+            {#each data as product}
 
-            <ProductWidget imgUrl={product.image_url} price={product.price} title={product.title} description={product.description} weight={product.weight}
-            size={product.size} battery={product.battery_autonomy} uselessness={product.uselessness} location={product.production_location} productId={product.product_id}>
-            </ProductWidget>
- 
-        {/each}
+                <ProductWidget imgUrl={product.image_url} price={product.price} title={product.title} description={product.description} weight={product.weight}
+                size={product.size} battery={product.battery_autonomy} uselessness={product.uselessness} location={product.production_location} productId={product.product_id}></ProductWidget>
+    
+            {/each}
 
         {:catch error}
         <p>Something went wrong while fetching the data:</p>

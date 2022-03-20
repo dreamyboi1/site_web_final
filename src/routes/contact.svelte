@@ -4,6 +4,23 @@
 
     let email;
     let message;
+
+    async function sendMessage(){
+        try{
+            const { data, error } = await supabase
+            .from('messages')
+            .insert(
+                {email: email, message: message}
+            )
+            if (error) throw new Error(error.message)
+            alert("Message sent!")
+            location.reload()
+            return data
+
+        } catch (TypeError){
+            console.log("No id attribute")
+        } 
+    }
 </script>
 
 <svelte:head>

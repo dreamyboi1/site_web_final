@@ -9,7 +9,7 @@
     <Nav></Nav>
 </div>
 
-<body class="bg-gray-900">
+<body class="bg-pink-500">
     <div class="grid place-items-center py-12">
         <div class="w-1/2">
             <h1 class="text-center font-semibold tracking-tight text-3xl">
@@ -32,7 +32,7 @@
         </section>
 
         <p class="text-center text-red-400 font-semibold tracking-tight text-5xl">
-            The Finance Team
+            The Development Team
         </p>        
 
         <section class="flex justify-center flex-wrap gap-6">
@@ -41,26 +41,7 @@
             {/each}
         </section>
 
-        <p class="text-center text-red-400 font-semibold tracking-tight text-5xl">
-            The Our Sales & Marketing Team
-        </p>        
-
-        <section class="flex justify-center flex-wrap gap-6">
-            {#each Array(5) as _, index}
-                <TeamWidget></TeamWidget>
-            {/each}
-        </section>
-
-        <p class="text-center text-red-400 font-semibold tracking-tight text-5xl">
-            The Incredible Dev Team
-        </p>        
-
-        <section class="flex justify-center flex-wrap gap-6">
-            {#each Array(2) as _, index}
-                <TeamWidget></TeamWidget>
-            {/each}
-        </section>
-
+        
     </div>
     
 

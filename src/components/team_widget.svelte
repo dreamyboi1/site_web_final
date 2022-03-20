@@ -1,7 +1,7 @@
 
 
 
-<div class="w-1/2 min-w-[100px] max-w-[300px] group rounded-lg rounded-t-3xl shadow-lg border-2 border-solid border-transparent bg-slate-100 hover:bg-slate-500 hover:hover:border-red-500">
+<div class="w-1/2 min-w-[100px] max-w-[300px] group rounded-lg rounded-t-3xl shadow-lg border-2 border-solid border-transparent bg-blue-500 hover:bg-slate-800 hover:hover:border-yellow-500 border-2 border-solid border-transparent">
     <div class="relative pb-3/5 rounded-full shadow-lg m-3">
         <img class="absolute w-full h-full object-cover rounded-full"
         src="../static/placeholder.png"

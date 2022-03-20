@@ -27,7 +27,7 @@
     </div>
     <div class="flex gap-6 items-center">
         {#if $user}
-            <button on:click={handleLogout} class="relative inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden text-sm font-semibold text-yellow-300 rounded-xl group bg-gradient-to-br from-yellow-300 to-pink-500 hover:from-yellow-300 hover:to-pink-500 hover:text-gray-900">
+            <button on:click={handleLogout} class="relative inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden text-sm font-semibold text-yellow-300  rounded-xl group bg-gradient-to-br from-yellow-300 to-pink-500 hover:from-yellow-300 hover:to-pink-500 hover:text-gray-900">
                 <span class="relative px-6 py-2.5 transition-all ease-in duration-75 bg-blue-500 rounded-xl group-hover:bg-opacity-0 ">
                     Log Out
                 </span>

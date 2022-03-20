@@ -46,10 +46,12 @@
 </script>
 
 
-<Nav/>
+<div class="absolute w-full z-10">
+    <Nav/>
+</div>
 
 
-<h1 class="text-center font-semibold tracking-tight text-3xl">
+<!-- <h1 class="text-center font-semibold tracking-tight text-3xl">
     My Profile
 </h1>
 
@@ -93,4 +95,34 @@
         </button>
     </form>
 
+</div> -->
+
+
+<div class="text-gray-900 bg-pink-500 h-screen flex flex-col justify-center">
+
+    <div class="w-80 p-4 self-center text-yellow-300 bg-blue-500 rounded-lg shadow-2xl flex flex-col gap-4">
+        <p class="font-semibold text-2xl">Your Profile</p>
+        {#await getProfile() then data}
+            {#each data as profile}
+                <form on:submit|preventDefault = {updateProfile} class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-1">
+                        <legend for="first_name">First Name:</legend>
+                        <input type="text" name="first_name" placeholder={profile.first_name} bind:value={firstName} class="placeholder-yellow-300 rounded-md bg-transparent text-yellow-300 w-full p-1 focus:ring-0 shadow-lg">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <legend for="last_name">Last Name:</legend>
+                        <input type="text" name="last_name" placeholder={profile.last_name} bind:value={lastName} class="placeholder-yellow-300 rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <legend for="age">Age:</legend>
+                        <input type="text" name="age" placeholder={profile.age} bind:value={age} class="placeholder-yellow-300 rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg">
+                    </div>
+                    <button type="submit" class="rounded-md bg-yellow-300 text-gray-900 py-1 shadow-lg">
+                        Update Profile
+                    </button>
+                </form>
+            {/each}
+        {/await}
+
+    </div>
 </div>

@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Products</title>
+</svelte:head>
+
 <script>
     import Nav from "../components/nav.svelte";
     import ProductWidget from "../components/product_widget.svelte";
@@ -23,7 +27,7 @@
 </script>
 
 
-<div class="sticky z-10 top-0 left-0 ">
+<div class="sticky z-10 top-0 left-0">
     <Nav></Nav>
 </div>
 

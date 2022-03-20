@@ -1,15 +1,31 @@
 <script>
     import Nav from "../components/nav.svelte";
     import Form from "../components/form.svelte";
+
+    let email;
+    let message;
 </script>
 
 <svelte:head>
     <title>Contact us! </title>
 </svelte:head>
 
-<Nav/>
-<h1 class="text-center text-4xl uppercase">Contact</h1>
+<div class="absolute w-full z-10">
+    <Nav/>
+</div>
 
-<div class="bg-lime-400 text-gray-900 w-1/4 rounded-2xl p-2">
-    <Form/>
+<div class="text-gray-900 h-screen bg-pink-500 flex flex-col justify-center">
+    <div class="w-2/3 p-4 self-center text-yellow-300 bg-blue-500 rounded-lg shadow-2xl flex flex-col gap-4">
+        <p class="font-semibold text-2xl">Contact Us!</p>
+        <form class="flex flex-col gap-4">
+            <div class="flex flex-col gap-2">
+                <legend for="email">E-mail:</legend>
+                <input type="email" name="email" placeholder="Enter your E-Mail" bind:value={email} class="rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg">
+            </div>
+            <div class="flex flex-col gap-2">
+                <legend for="message">Your message:</legend>
+                <textarea class="rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg" bind:value={message} placeholder="What is your interesting idea?" name="message" ></textarea>
+            </div>
+        </form>
+    </div>
 </div>

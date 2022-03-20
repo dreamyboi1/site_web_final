@@ -61,6 +61,15 @@
 
     </div>
 
+    <div class="mt-10 grid place-items-center gap-10 pt-10 pb-14">
+        <p class="text-4xl text-yellow-300 font-semibold">Do you have a product in mind that is even more useless?</p>
+        <div>
+            <a href="/contact" class="bg-yellow-300 p-4 uppercase text-blue-500 rounded-md shadow-lg font-semibold">
+                Tell us more!
+            </a>
+        </div>
+    </div>
+
 </body>
 
 

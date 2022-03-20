@@ -15,11 +15,16 @@
     import { user } from "$lib/sessionStore";
 
     async function sendData() {
+
+        if (!$user){
+            return alert("You are not logged in")
+        }  
+
         const { data, error } = await supabase
             .from('cart')
-            .insert([
-            { 'user_id': $user.id, 'product_id' : productId, 'quantity' : 7}
-        ])
+            .insert(
+            { 'user_id': $user.id, 'product_id' : productId, 'quantity' : 1}
+        )
         if (error) throw new Error(error.message) 
     } 
     

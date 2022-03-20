@@ -5,7 +5,18 @@
 
     let menuOn = false;
 
+    async function deleteCart(){
+        const { data, error } = await supabase
+            .from('cart')
+            .delete()
+            .match({ user_id: $user.id })
+    }
+    
+
     function handleLogout(){
+
+        deleteCart()
+
         console.log("Log out");
         supabase.auth.signOut();
         user.set(null);

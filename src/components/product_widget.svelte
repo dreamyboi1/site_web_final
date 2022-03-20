@@ -15,11 +15,16 @@
     import { user } from "$lib/sessionStore";
 
     async function sendData() {
+
+        if (!$user){
+            return alert("You are not logged in")
+        }  
+
         const { data, error } = await supabase
             .from('cart')
-            .insert([
-            { 'user_id': $user.id, 'product_id' : productId, 'quantity' : 2}
-        ])
+            .insert(
+            { 'user_id': $user.id, 'product_id' : productId, 'quantity' : 1}
+        )
         if (error) throw new Error(error.message) 
     } 
     
@@ -67,7 +72,7 @@
             <h4 class="text-center text-xl font-semibold tracking-tight mb-7
             sm:mb-1 text-yellow-600">{price} €</h4>
             <button class="shadow-lg bg-blue-500 hover:bg-gray-300 text-black font-bold mb-3 md:mb-2 sm:mb-1 py-2 px-4 rounded inline-flex items-center"
-            on:click={sendData()}>
+            on:click={sendData}>
                 <img class="w-4 h-4 mr-2"
                 src="../static/shopping-cart.png" 
                 alt="add to cart"/>

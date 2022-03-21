@@ -16,7 +16,7 @@
 <body class="bg-pink-500">
     <div class="grid place-items-center py-12">
         <div class="w-1/2">
-            <h1 class="text-center font-semibold tracking-tight text-3xl">
+            <h1 class="text-center font-semibold text-yellow-300 text-6xl">
                 Here is our marvelous team!
             </h1>
         </div>
@@ -25,7 +25,7 @@
 
     <div class="flex flex-col gap-7">
 
-        <p class="text-center text-yellow-500 font-semibold tracking-tight text-5xl">
+        <p class="text-center text-yellow-300 font-semibold tracking-tight text-5xl">
             Our 3 founders
         </p>
 
@@ -38,7 +38,7 @@
             urlImgTeam="https://ngupsypurpveskmdgato.supabase.in/storage/v1/object/sign/images/Team/jeff.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvVGVhbS9qZWZmLmpwZyIsImlhdCI6MTY0Nzc5NjUyMywiZXhwIjoxOTYzMTU2NTIzfQ.RlluDENd2ZJ-HStc2KPeLc7gtq8HAvRQNwETdGOvCZw"></TeamWidget>
             </section>
 
-        <p class="text-center text-yellow-500 font-semibold tracking-tight text-5xl">
+        <p class="text-center text-yellow-300 font-semibold tracking-tight text-5xl">
             The Development Team
         </p>        
 

@@ -22,14 +22,14 @@
             <div class="self-center">
                 <LogIn/>
             </div>
-            <button class="relative -left-24 top-2" on:click={swapLogin}>
+            <button class="relative -left-24 top-2 underline" on:click={swapLogin}>
                 Create an account.
             </button>
         {:else}
             <div class="self-center">
                 <SignUp/>
             </div>
-            <button class="relative -left-20 top-2"  on:click={swapLogin}>
+            <button class="relative -left-20 top-2 underline"  on:click={swapLogin}>
                 Already have an account?
             </button>
         {/if}

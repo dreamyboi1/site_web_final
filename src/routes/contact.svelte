@@ -27,7 +27,7 @@
     <title>Contact us! </title>
 </svelte:head>
 
-<div class="absolute w-full z-10">
+<div class="sticky z-10 top-0 left-0 w-full">
     <Nav/>
 </div>
 
@@ -35,11 +35,11 @@
     <div class="w-2/3 max-w-md p-4 self-center text-yellow-300 bg-blue-500 rounded-lg shadow-2xl flex flex-col gap-4">
         <p class="font-semibold text-2xl">Contact Us!</p>
         <form on:submit={sendMessage} class="flex flex-col gap-4">
-            <div class="flex flex-col gap-2">
+            <div class="rounded-lg p-3 flex flex-col gap-2 bg-blue-300">
                 <legend for="email">E-mail:</legend>
                 <input type="email" name="email" placeholder="Enter your E-Mail" bind:value={email} class="rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg">
             </div>
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2 bg-blue-300 rounded-lg p-3">
                 <legend for="message">Your message:</legend>
                 <textarea class="rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg" bind:value={message} placeholder="What is your interesting idea?" name="message" ></textarea>
             </div>

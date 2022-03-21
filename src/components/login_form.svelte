@@ -16,7 +16,6 @@
             loading = true;
             const { user, error } = await supabase.auth.signIn({email: String(email), password: String(pwd)})
             if (error) throw new Error(error.message);
-            alert("You are logged in!");
             goToProfile();
         } catch (error) {
             alert(error.error_description || error.message)
@@ -31,11 +30,11 @@
     <div class="flex flex-col gap-6">
         <p class="text-2xl font-semibold">Log In</p>
         <form on:submit|preventDefault = {handleLogin} class="flex flex-col gap-6">
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2 bg-blue-300 rounded-lg p-3">
                 <legend for="email">E-mail:</legend>
                 <input type="text" name="email" bind:value={email} placeholder="Enter your E-mail" class="rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg">
             </div>
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2 bg-blue-300 rounded-lg p-3">
                 <legend for="pwd">Password:</legend>
                 <input type="password" name="pwd" bind:value={pwd} placeholder="Enter your Password" class="rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg">
             </div>

@@ -5,7 +5,7 @@
 
 </script>
 
-<div class="sticky z-10 top-0 left-0">
+<div class="sticky z-10 top-0 left-0 w-full">
     <Nav></Nav>
 </div>
 

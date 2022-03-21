@@ -9,7 +9,7 @@
 </script>
 
 
-<div class="w-1/2 min-w-[100px] max-w-[300px] rounded-lg rounded-t-3xl shadow-lg bg-white">
+<div class="w-1/2 min-w-[100px] max-w-[300px] rounded-lg rounded-t-3xl shadow-lg bg-blue-300">
     <div class="relative pb-3/5 rounded-full shadow-lg m-3">
         <img class="absolute w-full h-full object-cover rounded-full"
         src={urlImgTeam}

@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-    <title>Our Team/title>
+    <title>Our Team</title>
 </svelte:head>
 
 <div class="sticky z-10 top-0 left-0 w-full">

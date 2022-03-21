@@ -2,8 +2,8 @@
     import supabase from "$lib/db.js";
     import { user } from "$lib/sessionStore";
     import {goto} from "$app/navigation";
-
     let menuOn = false;
+    //import slide from "svelte/transitions";
 
     async function deleteCart(){
         const { data, error } = await supabase

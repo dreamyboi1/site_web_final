@@ -21,6 +21,10 @@
 
 </script>
 
+<svelte:head>
+    <title>Your Cart</title>
+</svelte:head>
+
     
 <div class="sticky z-10 top-0 left-0 w-full">
     <Nav/>

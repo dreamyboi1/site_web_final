@@ -15,6 +15,10 @@
 
 </script>
 
+<svelte:head>
+    <title>Our Products</title>
+</svelte:head>
+
 
 <div class="sticky z-10 top-0 left-0 w-full">
     <Nav></Nav>

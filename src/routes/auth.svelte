@@ -12,6 +12,10 @@
     
 </script>
 
+<svelte:head>
+    <title>Log In</title>
+</svelte:head>
+
 <div class="absolute w-full z-10">
     <Nav/>
 </div>

@@ -1,6 +1,5 @@
 <script>
     import Nav from "../components/nav.svelte";
-    import Form from "../components/form.svelte";
     import supabase from "$lib/db.js";
 
     let email;

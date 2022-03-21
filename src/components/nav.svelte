@@ -12,6 +12,16 @@
             .match({ user_id: $user.id })
     }
     
+    async function getData() {
+        let { data, error } = await supabase
+            .from('cart')
+            .select()
+            .eq("user_id", $user.id)
+        if (error) throw new Error(error.message)
+        console.log(data);
+        return data;
+    }
+
 
     function handleLogout(){
 
@@ -51,8 +61,9 @@
             <ul class="text-4xl">
                 
                 {#if $user}
-                    <button class="hover:text-pink-500" on:click={handleLogout}>Log Out</button>
-                    <li><a class="hover:text-pink-500" href="/profile">Your Profile</a></li>
+                <li><a class="hover:text-pink-500" href="/cart">Your Cart</a></li>
+                <li><a class="hover:text-pink-500" href="/profile">Your Profile</a></li>
+                <button class="hover:text-pink-500" on:click={handleLogout}>Log Out</button>
                 {:else}
                     <li><a href="/auth" class="hover:text-pink-500">Log In</a></li>
                 {/if}

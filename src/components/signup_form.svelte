@@ -21,7 +21,7 @@
             } else{
                 success = true;
                 alert("Sign up successful. Check your email!");
-                goto("/");
+                goto("/profile");
             }
         } catch (error) {
             success = false;

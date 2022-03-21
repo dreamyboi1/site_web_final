@@ -74,7 +74,7 @@
             <button class="shadow-lg bg-blue-500 hover:bg-white text-black font-bold mb-3 md:mb-2 sm:mb-1 py-2 px-4 rounded inline-flex items-center"
             on:click={sendData}>
                 <img class="w-4 h-4 mr-2"
-                src="../static/shopping-cart.png" 
+                src="https://ngupsypurpveskmdgato.supabase.in/storage/v1/object/sign/images/icons/shopping-cart.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvaWNvbnMvc2hvcHBpbmctY2FydC5wbmciLCJpYXQiOjE2NDc4NTYwOTMsImV4cCI6MTk2MzIxNjA5M30.Lzmcy1Ydx3RJ3r4LjgfHFgOiZ5Qy_OYJrsyq6jA-Rkc" 
                 alt="add to cart"/>
                 <span>+</span>
             </button>

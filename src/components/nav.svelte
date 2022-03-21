@@ -31,12 +31,14 @@
 
 <div id="mobile_menu" class="absolute sm:hidden w-full text-yellow-300">
     <button on:click={toggleMenu} class="{(menuOn)? "hidden" : "absolute"} top-4 left-4">
-        <img class="h-8 aspect-square text-red-400" src="../../static/more.png" alt="Menu icon">
+        <img class="h-8 aspect-square text-red-400" src="https://ngupsypurpveskmdgato.supabase.in/storage/v1/object/sign/images/icons/more.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvaWNvbnMvbW9yZS5wbmciLCJpYXQiOjE2NDc4NTYzNzksImV4cCI6MTk2MzIxNjM3OX0.2T-JtwFGcAdMq0qXbh0r82hNmqnzoO0cbDYfEgrqCuo"
+            alt="Menu icon">
     </button>
     <div class="{(menuOn)? "" : "hidden"} bg-blue-500 p-4 flex justify-between">
         <div>
             <button on:click={toggleMenu} class="">
-                <img class="h-7 aspect-square text-red-400" src="../../static/close.png" alt="Menu icon">
+                <img class="h-7 aspect-square text-red-400" src="https://ngupsypurpveskmdgato.supabase.in/storage/v1/object/sign/images/icons/close.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvaWNvbnMvY2xvc2UucG5nIiwiaWF0IjoxNjQ3ODU2MzU3LCJleHAiOjE5NjMyMTYzNTd9.Fk0-uMvNixOE99Vo1AQRHrThp6UG4WW9JataZ81qruc"
+                    alt="Menu icon">
             </button>
             <ul class="text-4xl">
                 <li><a href="/" class="hover:text-pink-500">Home</a></li>
@@ -87,8 +89,10 @@
         
         
         {#if $user}
-            <a href="/cart"><img src="../../static/shopping-cart.png" alt="Shopping cart" class="h-6 w-6"></a> 
-            <a href="/profile"><img src="../../static/user.png" alt="User information" class="h-6 w-6"></a>
+            <a href="/cart"><img src="https://ngupsypurpveskmdgato.supabase.in/storage/v1/object/sign/images/icons/shopping-cart.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvaWNvbnMvc2hvcHBpbmctY2FydC5wbmciLCJpYXQiOjE2NDc4NTYwOTMsImV4cCI6MTk2MzIxNjA5M30.Lzmcy1Ydx3RJ3r4LjgfHFgOiZ5Qy_OYJrsyq6jA-Rkc"
+                alt="Shopping cart" class="h-6 w-6"></a> 
+            <a href="/profile"><img src="https://ngupsypurpveskmdgato.supabase.in/storage/v1/object/sign/images/icons/user.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvaWNvbnMvdXNlci5wbmciLCJpYXQiOjE2NDc4NTYxMjAsImV4cCI6MTk2MzIxNjEyMH0.Th7_m49B5E78yw6Mdymde3pFEig0b2IAYYoXq39q8K0"
+                alt="User information" class="h-6 w-6"></a>
         {/if}
     </div>
     

@@ -51,15 +51,15 @@
     <div class="flex flex-col gap-6">
         <p class="text-2xl font-semibold">Sign In</p>
         <form on:submit|preventDefault = {handleSubmit} class="flex flex-col gap-4">
-            <div class="flex flex-col gap-2 bg-blue-300">
+            <div class="flex flex-col gap-2 bg-blue-300 rounded-lg p-2">
                 <legend for="email">Email:</legend>
                 <input type="email" name="email" placeholder="Enter your E-Mail" bind:value={email} class="rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg">
             </div>
-            <div class="flex flex-col gap-2 bg-blue-300">
+            <div class="flex flex-col gap-2 bg-blue-300 rounded-lg p-2">
                 <legend for="pwd">Password:</legend>
                 <input type="password" name="pwd" placeholder="Enter a Password" bind:value={pwd} class="rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg">
             </div>
-            <div class="flex flex-col gap-2 bg-blue-300">
+            <div class="flex flex-col gap-2 bg-blue-300 rounded-lg p-2">
                 <legend for="pwd">Confirm Password:</legend>
                 <input type="password" name="pwd" placeholder="Confirm your Password" bind:value={confirm_pwd} class="rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg">
             </div>

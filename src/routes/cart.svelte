@@ -43,10 +43,10 @@
             <div class="rounded-lg bg-blue-400 p-4">
                 <table>
                     <thead>
-                        <tr>
+                        <tr class="">
                             <th></th>
                             <th>Item</th>
-                            <th>Quatity</th>
+                            <th>Quantity</th>
                             <th>Price</th>
                         </tr>
                     </thead>
@@ -85,7 +85,7 @@
 
         </div>
 
-        <div class="self-center rounded-lg bg-yellow-500 p-4 shadow-lg">
+        <div class="self-center rounded-lg bg-yellow-300 p-4 shadow-lg my-6">
             <button on:click={() => alert("Work in Progress / Future Fonctionalitiy")}
                 >Proceed to Payment</button>
         </div>

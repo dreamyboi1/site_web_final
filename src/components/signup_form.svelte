@@ -3,12 +3,10 @@
     import {goto} from "$app/navigation";
     let email;
     let pwd;
-    let loading = false;
     let confirm_pwd;
 
     async function signUpwithEmail(){
         try {
-            loading = true;
             const { user, session, error } = await supabase.auth.signUp(
             {
             email: String(email),
@@ -16,18 +14,14 @@
             },
             )
             if (error){
-                success = false;
                 throw new Error(error.message);
             } else{
-                success = true;
                 alert("Sign up successful. Check your email!");
                 goto("/profile");
             }
         } catch (error) {
-            success = false;
+
             alert(error.error_description || error.message)
-        } finally{
-            loading = false;
         }
     }
 

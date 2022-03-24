@@ -3,7 +3,6 @@
     import { user } from "$lib/sessionStore";
     import {goto} from "$app/navigation";
     let menuOn = false;
-    //import slide from "svelte/transitions";
 
     async function deleteCart(){
         const { data, error } = await supabase
@@ -11,17 +10,6 @@
             .delete()
             .match({ user_id: $user.id })
     }
-    
-    async function getData() {
-        let { data, error } = await supabase
-            .from('cart')
-            .select()
-            .eq("user_id", $user.id)
-        if (error) throw new Error(error.message)
-        console.log(data);
-        return data;
-    }
-
 
     function handleLogout(){
 
@@ -101,7 +89,7 @@
         
         {#if $user}
             <a href="/cart"><img src="https://ngupsypurpveskmdgato.supabase.in/storage/v1/object/sign/images/icons/shopping-cart.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvaWNvbnMvc2hvcHBpbmctY2FydC5wbmciLCJpYXQiOjE2NDc4NTYwOTMsImV4cCI6MTk2MzIxNjA5M30.Lzmcy1Ydx3RJ3r4LjgfHFgOiZ5Qy_OYJrsyq6jA-Rkc"
-                alt="Shopping cart" class="h-6 w-6"></a> 
+                alt="Shopping cart" class="h-6 w-6"></a>
             <a href="/profile"><img src="https://ngupsypurpveskmdgato.supabase.in/storage/v1/object/sign/images/icons/user.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJpbWFnZXMvaWNvbnMvdXNlci5wbmciLCJpYXQiOjE2NDc4NTYxMjAsImV4cCI6MTk2MzIxNjEyMH0.Th7_m49B5E78yw6Mdymde3pFEig0b2IAYYoXq39q8K0"
                 alt="User information" class="h-6 w-6"></a>
         {/if}

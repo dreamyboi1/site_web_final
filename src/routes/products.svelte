@@ -3,7 +3,6 @@
     import ProductWidget from "../components/product_widget.svelte";
     import supabase from "$lib/db.js";
 
-
     async function getData() {
         let { data, error } = await supabase
             .from('products')

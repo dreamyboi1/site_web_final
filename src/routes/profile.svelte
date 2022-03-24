@@ -12,14 +12,13 @@
 
     async function getProfile() {
         if (!$user){
-            return
+            return 
         }
         let { data, error } = await supabase
             .from('profiles')
             .select()
             .eq("user_id", $user.id)
         if (error) throw new Error(error.message)
-
         return data
     }
 
@@ -59,25 +58,45 @@
     <div class="w-80 p-4 self-center text-yellow-300 bg-blue-500 rounded-lg shadow-2xl flex flex-col gap-4">
         <p class="font-semibold text-2xl">Your Profile</p>
         {#await getProfile() then data}
-            {#each data as profile}
+            {#if data.length != 0}
+                {#each data as profile}
+                    <form on:submit|preventDefault = {updateProfile} class="flex flex-col gap-4">
+                        <div class="flex flex-col gap-1 bg-blue-300 rounded-lg p-3">
+                            <legend for="first_name">First Name:</legend>
+                            <input type="text" name="first_name" placeholder={profile.first_name} bind:value={firstName} class="placeholder-yellow-300 rounded-md bg-transparent text-yellow-300 w-full p-1 focus:ring-0 shadow-lg">
+                        </div>
+                        <div class="flex flex-col gap-1 bg-blue-300 rounded-lg p-3">
+                            <legend for="last_name">Last Name:</legend>
+                            <input type="text" name="last_name" placeholder={profile.last_name} bind:value={lastName} class="placeholder-yellow-300 rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg">
+                        </div>
+                        <div class="flex flex-col gap-1 bg-blue-300 rounded-lg p-3">
+                            <legend for="age">Age:</legend>
+                            <input type="text" name="age" placeholder={profile.age} bind:value={age} class="placeholder-yellow-300 rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg">
+                        </div>
+                        <button type="submit" class="rounded-md bg-yellow-300 text-gray-900 py-1 shadow-lg">
+                            Update Profile
+                        </button>
+                    </form>
+                {/each}
+            {:else}
                 <form on:submit|preventDefault = {updateProfile} class="flex flex-col gap-4">
                     <div class="flex flex-col gap-1 bg-blue-300 rounded-lg p-3">
                         <legend for="first_name">First Name:</legend>
-                        <input type="text" name="first_name" placeholder={profile.first_name} bind:value={firstName} class="placeholder-yellow-300 rounded-md bg-transparent text-yellow-300 w-full p-1 focus:ring-0 shadow-lg">
+                        <input type="text" name="first_name" placeholder="Enter you first name" bind:value={firstName} class="placeholder-yellow-300 rounded-md bg-transparent text-yellow-300 w-full p-1 focus:ring-0 shadow-lg">
                     </div>
                     <div class="flex flex-col gap-1 bg-blue-300 rounded-lg p-3">
                         <legend for="last_name">Last Name:</legend>
-                        <input type="text" name="last_name" placeholder={profile.last_name} bind:value={lastName} class="placeholder-yellow-300 rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg">
+                        <input type="text" name="last_name" placeholder="Enter you last name" bind:value={lastName} class="placeholder-yellow-300 rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg">
                     </div>
                     <div class="flex flex-col gap-1 bg-blue-300 rounded-lg p-3">
                         <legend for="age">Age:</legend>
-                        <input type="text" name="age" placeholder={profile.age} bind:value={age} class="placeholder-yellow-300 rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg">
+                        <input type="text" name="age" placeholder="Enter your age" bind:value={age} class="placeholder-yellow-300 rounded-md bg-transparent text-yellow-300 w-full p-1 shadow-lg">
                     </div>
                     <button type="submit" class="rounded-md bg-yellow-300 text-gray-900 py-1 shadow-lg">
                         Update Profile
                     </button>
-                </form>
-            {/each}
+                </form>  
+            {/if}
         {/await}
 
     </div>

@@ -9,15 +9,15 @@
         try{
             const { data, error } = await supabase
                 .from('messages')
-                .insert([
-            {email: email, message: message}])
+                .insert(
+            {email: email, message: message})
             alert("Message sent!")
         }
         catch(error){
             console.log(error.message)
         }
         
-        //location.reload()
+        location.reload()
         return data
     }
 </script>

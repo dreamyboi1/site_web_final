@@ -1,10 +1,10 @@
 <script>
     import Nav from "../components/nav.svelte"
     import supabase from "$lib/db.js";
-    import {user} from "$lib/sessionStore.js";
+    import {user, cartAnimation} from "$lib/sessionStore.js";
 
     export let sum = 0;
-
+    cartAnimation.set(false);
     function computeSum(toBeAdded){
         (sum += toBeAdded).toFixed(2)
         return ''

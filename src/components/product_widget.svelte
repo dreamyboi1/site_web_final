@@ -12,7 +12,7 @@
     export let productId;
     
     import supabase from "$lib/db.js";
-    import { user } from "$lib/sessionStore";
+    import { user, cartAnimation } from "$lib/sessionStore";
 
     async function sendData() {
 
@@ -25,7 +25,8 @@
             .insert(
             { 'user_id': $user.id, 'product_id' : productId, 'quantity' : 1, 'product_title' : title, 'product_price' : price, 'img_url' : imgUrl}
         )
-        if (error) throw new Error(error.message) 
+        if (error) throw new Error(error.message)
+        cartAnimation.set(true)
     } 
     
 
